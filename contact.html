@@ -5,23 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Contact Us | Bread Avenue</title>
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
     <body>
         <header>
             <div class="container nav-container">
-      <a href="index.html">
-        <img src="images/logo.jpg" alt="Bread Avenue Logo" class="logo">
-      </a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="order.html">Order</a></li>
-          <li><a href="contact.html" class="active">Contacts</a></li>
-        </ul>
-      </nav>
-    </div>
+                <a href="index.html">
+                    <img src="images/logo.jpg" alt="Bread Avenue Logo" class="logo">
+                </a>
+
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <nav>
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">Order</a></li>
+                        <li><a href="contact.html" class="active">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <section class="contact">
@@ -54,5 +60,27 @@
                 </div>
             </div>
         </section>
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Bread Avenue | Wellington, Freetown | +232 74 777 733</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/bread_avenue/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i></a> 
+                    <a href="https://www.facebook.com/breadsnc/" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/23274777733" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const menuToggle = document.getElementById("menu-toggle");
+            const navLinks = document.getElementById("nav-links");
+
+            menuToggle.addEventListener("click", () => {
+                navLinks.classList.toggle("show")
+            });
+        </script>
     </body>
 </html>

@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: "Poppins" sans-serif;
+    font-family: "Poppins", sans-serif;
     line-height: 1.6;
     background: #fcfbac;
     color: #333;
@@ -41,9 +41,9 @@ header {
     color: #8B5E3C;
     padding: 1px 0;
     position: sticky;
-     top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -62,7 +62,7 @@ header h1 {
 
 .nav-links a {
     color: #8B5E3C;
-     text-decoration: none;
+    text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -77,6 +77,55 @@ header h1 {
     border-bottom: 2px solid white;
 }
 
+.menu-toggle {
+    margin-left: auto;
+    display: none;
+    font-size: 1.8rem;
+    color: black;
+    cursor: pointer;
+}
+
+/*mobile styles*/
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #8B4513;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow:  0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links a {
+        color: #f4e2d8;
+        padding: 8px 12px;
+        display: block;
+        border-radius: 6px;
+        font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+        background-color: #b5651d;
+        color: white;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+}
 
 .hero {
     background: url("../images/interior02.jpeg") center bottom/cover no-repeat;
@@ -87,32 +136,148 @@ header h1 {
     display: flex;
     justify-content: center;
     text-align: center;
-    text-shadow: #333;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    position: relative;
    
 }
 
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.highlight {
+    color: #b5651d;
+}
+
 .hero h1, .hero p {
     color: white;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
 }
 
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+    color: white;
+}
 
-
-
-.hero h1, .hero p {
+.hero p {
+    font-size: 1.2rem;
     color: white;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
 }
 
-.hero.about-hero{
+.hero .btn {
+    margin-top: 20px;
+    display: inline-block;
+    background: #8B5E3C;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #b5651d;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); ;
+    z-index: 1;
+}
+
+.hero{
     background: url("../images/interior02.jpeg") center/cover no-repeat;
     padding: 100px 20px;
     color: white;
     text-align: center;
+    align-items: flex-end;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 
 }
 
+.hero.about-hero{
+    background: url("../images/bread\ avenue\ bakers\ 02.jpg") center/cover no-repeat;
+    padding: 100px 20px;
+    background-position: center bottom;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    
+}
+
+.academy {
+    background-color: #fff8f0;
+    padding: 60px 20px;
+}
+
+.academy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.academy-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.academy-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.academy-text {
+    flex: 1;
+    color: #5C4033;
+    max-width: 600px;
+    text-align: center;
+}
+
+.academy-text h2 {
+    font-size: 2rem;
+    color: #8B5E3C;
+    margin-bottom: 15px;
+}
+
+.academy-text p {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    margin-bottom: 15px;
+}
+
+.academy-text .btn {
+    text-decoration: none;
+}
+
+/*side-by-side layout on larger screens*/
+@media (min-width: 760px) {
+    .academy-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .academy-image, .academy-text {
+        flex: 1;
+    }
+}
+
 .about {
     padding: 50px 20px;
     background-color: #f4e2d8;
@@ -132,12 +297,13 @@ header h1 {
     background-color: #f4e2d8;
 }
 
-
-/*css for the about page*/
-.about-page {
-    padding: 60px;
-    background-color: #fff8f0;
-    color: #333;
+.about-image{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .about-page h1 {
@@ -153,6 +319,81 @@ header h1 {
     font-size: 1.1rem;
 }
 
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    display: block;
+    height: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery {
+    padding: 50px 20px;
+    background-color: #fff8f0;
+    text-align: center;
+}
+
+.testimonials {
+    padding: 60px 20px;
+    background-color: #fff8f0;
+    text-align: center;
+}
+
+.testimonial-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    background-color: #ffffff;
+    padding: 20px;
+    gap: 20px;
+    margin-top: 30px;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .testimonial-scroll {
+        -ms-overflow-style: none;
+    }
+    .testimonial-scroll::-webkit-scrollbar {
+    display: none;
+}
+}
+
+
+
+.testimonial-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.initials {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #8B5E3C;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 0 auto 15px auto;
+}
+
+/*css for the menu page*/
 .menu {
     padding: 60px 20px;
     background-color: #fff8f0;
@@ -162,6 +403,14 @@ header h1 {
     text-align: center;
     color: #8B5E3C;
     margin-bottom: 40px;
+}
+
+.category-title {
+    font-size: 1.6rem;
+    color: #b5651d;
+    margin: 40px 0 20px;
+    border-bottom: 2px solid #f4e2d8;
+    padding-bottom: 10px;
 }
 
 .menu-grid {
@@ -218,15 +467,64 @@ footer {
     padding: 20px 0;
 }
 
+footer a {
+    color: #f4e2d8;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #f4e2d8;
+    margin: 0 8px;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: gray;
+}
+
 /*css for the order page*/
 .order-form {
-    background: #fff8f0;
+    background: white;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     max-width: 600px;
     margin: auto;
 }
+
+.order-info {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5C4033;
+}
+
+.order-wrapper {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.order {
+    padding: 50px;
+    background-color: #fff8f0;
+}
+
+
 
 .form-group {
     margin-bottom: 20px;
@@ -237,6 +535,29 @@ footer {
     font-weight: bold;
     margin-bottom:  8px;
     color: #8B5E3C;
+}
+
+.form-group select {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 40px;/*space for arrow*/
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .form-group input:focus,

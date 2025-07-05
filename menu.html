@@ -5,15 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Our Menu | Bread Avenue</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
     <body>
         <header>
             <div class="container nav-container">
                  <a href="index.html">
                     <img src="images/logo.jpg" alt="Bread Avenue Logo" class="logo">
-                </a>
+                 </a>
+
+                 <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                 </div>
+
                 <nav>
-                    <ul class="nav-links">
+                    <ul class="nav-links" id="nav-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="menu.html" class="active">Menu</a></li>
@@ -26,51 +32,150 @@
         <section class="menu">
             <div class="container">
                 <h1>Our Menu</h1>
-                <div class="menu-grid">
+                <!--breads-->
+                <div class="menu-category">
+                    <h2 class="category-title">Breads</h2>
+                     <div class="menu-grid">
                     <div class="menu-item">
-                        <img src="images/bun.png" alt="Soft Loaf">
+                        <img src="images/banana bread02.jpg" alt="Banana Bread">
+                        <div class="menu-info">
+                            <h3>Banana Bread</h3>
+                            <p>Freshly baked soft bread loaf.</p>
+                            <span>Le 55</span>
+                        </div>    
+                    </div>
+                    <!--more items here -->
+                    <div class="menu-item">
+                        <img src="images/soft loaf02.jpg" alt="Soft Loaf">
                         <div class="menu-info">
                             <h3>Soft Loaf</h3>
                             <p>Freshly baked soft bread loaf.</p>
-                            <span>Le 15</span>
+                            <span>Le 50</span>
                         </div>    
                     </div>
-                
 
-                    <!--more items here -->
-                 
                     <div class="menu-item">
-                        <img src="images/croissant.png" alt="Soft Loaf">
+                        <img src="images/wheat bread.jpg" alt="Wheat Bread">
                         <div class="menu-info">
-                            <h3>croissant</h3>
+                            <h3>Wheat Bread</h3>
+                            <p>Freshly baked soft bread loaf.</p>
+                            <span>Le 50</span>
+                        </div>    
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="images/white bread.jpg" alt="white bread">
+                        <div class="menu-info">
+                            <h3>White Bread</h3>
+                            <p>Freshly baked soft bread loaf.</p>
+                            <span>Le 50</span>
+                        </div>    
+                    </div>
+                </div>
+
+                <!--Cakes-->
+                <div class="menu-category">
+                    <h2 class="category-title">Cakes</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                        <img src="images/cup cake.jpg" alt="Cup Cake">
+                        <div class="menu-info">
+                            <h3>Cup Cake</h3>
                             <p>Freshly baked soft bread loaf.</p>
                             <span>Le 45</span>
                         </div>    
                     </div>
                 
-               
-                 
                     <div class="menu-item">
-                        <img src="images/wedding cake.png" alt="Soft Loaf">
+                        <img src="images/whole cake 02.jpg" alt="Whole Cake">
                         <div class="menu-info">
-                            <h3>Wedding cake</h3>
+                            <h3>Whole Cake</h3>
                             <p>Freshly baked soft bread loaf.</p>
-                            <span>Le 500</span>
+                            <span>Le 350</span>
                         </div>    
                     </div>
-                
-                 
+
                     <div class="menu-item">
-                        <img src="images/soft loaf.png" alt="Soft Loaf">
+                        <img src="images/fruit cake.jpg" alt="Fruit Cake">
                         <div class="menu-info">
-                            <h3>Soft Loaf</h3>
+                            <h3>Fruit Cake</h3>
                             <p>Freshly baked soft bread loaf.</p>
-                            <span>Le 35</span>
+                            <span>Le 50</span>
+                        </div>    
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="images/sliced cake.jpg" alt="Sliced Cake">
+                        <div class="menu-info">
+                            <h3>Sliced Cake</h3>
+                            <p>Freshly baked soft bread loaf.</p>
+                            <span>Le 45</span>
                         </div>    
                     </div>
                 </div>
 
+                <!--Pasteries-->
+                <div class="menu-category">
+                    <h2 class="category-title">Pasteries</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                        <img src="images/chocolate criossant.jpg" alt="Chocolate Criossant">
+                        <div class="menu-info">
+                            <h3>Chocolate Criossant</h3>
+                            <span>Le 60</span>
+                        </div>
+
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="images/cheese criossant.jpg" alt="Cheese Criossant">
+                        <div class="menu-info">
+                            <h3>Cheese Criossant</h3>
+                            <span>Le 60</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="images/plain criossant.jpg" alt="Plain Criossant">
+                        <div class="menu-info">
+                            <h3>Plain Criossant</h3>
+                            <span>Le 60</span>
+                        </div>
+
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="images/sweet bun.jpg" alt="sweet bun">
+                        <div class="menu-info">
+                            <h3>Sweet Bun</h3>
+                            <span>Le 45</span>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </section>
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Bread Avenue | Wellington, Freetown | +232 74 777 733</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/bread_avenue/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i></a> 
+                    <a href="https://www.facebook.com/breadsnc/" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/23274777733" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const menuToggle = document.getElementById("menu-toggle");
+            const navLinks = document.getElementById("nav-links");
+
+            menuToggle.addEventListener("click", () => {
+                navLinks.classList.toggle("show")
+            });
+        </script>
     </body>
 </html>

@@ -6,6 +6,7 @@
         <title>Bread Avenue Bakery</title>
         <link rel="stylesheet" href="css/style.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
     <body>
         <header>
@@ -13,9 +14,14 @@
                 <a href="#">
                     <img src="images/logo.jpg" alt="Bread Avenue Logo" class="logo">
                 </a>
+
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+
                 <nav>
-                    <ul class="nav-links">
-                        <li><a href="#">Home</a></li>
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="menu.html">Menu</a></li>
                         <li><a href="order.html">Order</a></li>
@@ -27,18 +33,46 @@
 
         <section class="hero">
             <div class="container">
-                <h2>Freshly baked Goodness Everyday</h2>
-                <p>Delicious bread, pastries, and more - made with love in Freetown.</p>
+                <h1><span class="highlight">Freshly baked</span> Goodness Everyday</h1>
+                <p>Delicious bread, pastries, and sweet treats - made with love in the east of Freetown.</p>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+        </section>
+
+        <section class="academy">
+            <div class="academy-container">
+                <div class="academy-image">
+                    <img src="images/baker showing breads.jpg" alt="Bread Avenue Academy">
+                </div>
+                <div class="academy-text">
+                    <h2>Bread Avenue Academy</h2>
+                    <p>Our Academy is dedicated to nuturing aspiring bakers by offering hands-on trianing, mentorship, and access to professional baking techniques.</p>
+                    <a href="contact.html" class="btn">Join The Academy</a>
+                </div>
             </div>
         </section>
 
         <footer>
             <div class="container">
-                <p>&copy; 2025 Bread Avenue | Wellington, Freetown | +232 74 777 733
-                     <a href="#">Instagram</a> and 
-                     <a href="#">Facebook</a>
-                </p>
+                <p>&copy; 2025 Bread Avenue | Wellington, Freetown | +232 74 777 733</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/bread_avenue/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i></a> 
+                    <a href="https://www.facebook.com/breadsnc/" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/23274777733" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
         </footer>
+
+        <script>
+            const menuToggle = document.getElementById("menu-toggle");
+            const navLinks = document.getElementById("nav-links");
+
+            menuToggle.addEventListener("click", () => {
+                navLinks.classList.toggle("show")
+            });
+        </script>
     </body>
 </html>

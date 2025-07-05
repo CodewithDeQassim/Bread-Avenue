@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>About Us | Bread Avenue</title>
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
     <body>
         <header>
@@ -12,8 +13,13 @@
                 <a href="index.html">
                     <img src="images/logo.jpg" alt="Bread Avenue Logo" class="logo">
                 </a>
+
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
                 <nav>
-                    <ul class="nav-links">
+                    <ul class="nav-links" id="nav-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html" class="active">About</a></li>
                         <li><a href="menu.html">Menu</a></li>
@@ -58,30 +64,70 @@
             <div class="container">
                 <h2>Fresh From Our Oven</h2>
                 <div class="gallery-grid">
-                    <img src="" alt="Soft Loaf">
-                    <img src="" alt="Sweet Bun">
-                    <img src="" alt="Croissants">
+                    <img src="images/soft laoves.jpg" alt="Soft Loaf" class="about-image">
+                    <img src="images/buns.jpg" alt="Sweet Bun" class="about-image">
+                    <img src="images/criossants.jpg" alt="Croissants" class="about-image">
+                    <img src="images/cup cakes.jpg" alt="Cup Cakes" class="about-image">
+                    <img src="images/whole cake 02.jpg" alt="Whole Cakes" class="about-image">
                 </div>
             </div>
         </section>
 
         <section class="testimonials">
-            <div    class="container">
+            <div class="container">
                <h2>What Our customers Say</h2>
-               <blockquote>"Best bakery in the East! Their buns are always fresh and soft." - Fatmata K.</blockquote>
-               <blockquote>"I can't start my day without their warm, fluffy bread." - Musa J.</blockquote>
+               <div class="testimonial-scroll">
+                    <div class="testimonial-card" style="scroll-snap-align: start;">
+                        <div class="initials">FK</div>
+                        <P class="review-text">"Best bakery in the East! Their buns are always fresh and soft."</P>
+                    </div>
+               
+
+                    <div class="testimonial-card" style="scroll-snap-align: start;">
+                        <div class="initials">MJ</div>
+                        <P class="review-text">"I can't start my day without their warm, fluffy bread."</P>
+                    </div>
+
+                     <div class="testimonial-card" style="scroll-snap-align: start;">
+                        <div class="initials">AB</div>
+                        <P class="review-text">"I ordered a birthday cake last minute, and they still managed to deliver something beautiful and delicious. Amazing service!"</P>
+                    </div>
+
+                     <div class="testimonial-card" style="scroll-snap-align: start;">
+                        <div class="initials">AJ</div>
+                        <P class="review-text">"Their wheat bread stays fresh for days and tastes homemade. You can tell they bake with care."</P>
+                    </div>
+
+                     <div class="testimonial-card" style="scroll-snap-align: start;">
+                        <div class="initials">MJ</div>
+                        <P class="review-text">"I walked in to try their criossants, now it's my go-to spot every morning. The chocolate criossant is heavenly!"</P>
+                    </div>
+               </div>
+               
             </div>
         </section>
 
         <footer>
             <div class="container">
-                <p>&copy; 2025 Bread Avenue SL. All rights reserved.</p>
-                <div class="socials">
-                    <a href="https://facebook.com/breadavenuesl" target="_blank">facebook</a>
-                    <a href="https://instagram.com/bread_avenuesl" target="_blank">instagram</a>
-                    <a href="https://wa.me/232xxxxxxxxx" target="_blank">Whatsapp</a>
+                <p>&copy; 2025 Bread Avenue | Wellington, Freetown | +232 74 777 733</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/bread_avenue/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i></a> 
+                    <a href="https://www.facebook.com/breadsnc/" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/23274777733" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </footer>
+
+         <script>
+            const menuToggle = document.getElementById("menu-toggle");
+            const navLinks = document.getElementById("nav-links");
+
+            menuToggle.addEventListener("click", () => {
+                navLinks.classList.toggle("show")
+            });
+        </script>
     </body>
 </html>
