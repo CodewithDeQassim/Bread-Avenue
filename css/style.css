@@ -645,7 +645,7 @@ footer a:hover {
     .hero{
         background-position: center bottom !important;
         padding: 80px 20px 40px !important;
-        background-color: red !important;
+        background-color: #fff !important;
     }
 
     .hero h1 {
